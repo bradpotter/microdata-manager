@@ -7,7 +7,7 @@
  * @copyright  Copyright (c) 2013, Brad Potter
  * @license    http://www.opensource.org/licenses/gpl-license.php GPL-2.0+
  * @link       http://bradpotter.com/plugins/microdata-manager
- * @credit     Based in part on code from the Genesis Framework
+ * @credit     Based in part on code from the Genesis Framework by StudioPress
  *
  * @since      0.9.0
  */
