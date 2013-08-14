@@ -11,7 +11,9 @@ Genesis Framework 2.0
 <strong>INTRODUCTION</strong><br />
 Microdata is a feature of HTML5 that provides a simple way to embed semantic markup into HTML documents. “Search engines, web crawlers, and browsers can extract and process Microdata from a web page and use it to provide a richer browsing experience for users” - Wikipedia.<br />
 
-Microdata uses a supporting vocabulary. Genesis 2.0 uses the vocabulary from Schema.org. Schema.org provides a collection of schemas, i.e., html tags, that webmasters can use to markup their pages in ways recognized by major search providers. Search engines including Bing, Google, Yahoo! and Yandex rely on this markup to improve the display of search results, making it easier for people to find the right web pages.
+Microdata uses a supporting vocabulary. Genesis 2.0 uses the vocabulary from Schema.org.<br />
+
+Schema.org provides a collection of schemas, i.e., html tags, that webmasters can use to markup their pages in ways recognized by major search providers. Search engines including Bing, Google, Yahoo! and Yandex rely on this markup to improve the display of search results, making it easier for people to find the right web pages.
 Please visit http://schema.org/docs/full.html to learn more about Schema.<br />
 
 <strong>DEFAULT GENESIS MICRODATA SETTINGS</strong><br />
