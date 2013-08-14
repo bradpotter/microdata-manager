@@ -46,22 +46,22 @@ function microdata_manager_inpost_microdata_box() {
 
 	?>
 
-	<p><label for="content_itemtype"><b><?php _e( 'Main Content - itemtype', 'microdata' ); ?></b></label><label><?php _e( ' (Used on post only)', 'microdata_manager' ); ?></label></p>
+	<p><label for="content_itemtype"><b><?php _e( 'Main Content - itemtype', 'microdata-manager' ); ?></b></label><label><?php _e( ' (Used on post only)', 'microdata-manager' ); ?></label></p>
 	<p><input class="large-text" type="text" name="microdata_manager[_content_itemtype]" id="content_itemtype" placeholder="http://schema.org/Blog" value="<?php echo esc_attr( genesis_get_custom_field( '_content_itemtype' ) ); ?>" /></p>
 
-	<p><label for="entry_itemtype"><b><?php _e( 'Entry - itemtype', 'microdata' ); ?></b></label><label><?php _e( ' (Used on page and post)', 'microdata_manager' ); ?></label></p>
+	<p><label for="entry_itemtype"><b><?php _e( 'Entry - itemtype', 'microdata-manager' ); ?></b></label><label><?php _e( ' (Used on page and post)', 'microdata-manager' ); ?></label></p>
 	<p><input class="large-text" type="text" name="microdata_manager[_entry_itemtype]" id="entry_itemtype" placeholder="<?php echo $placeholder; ?>" value="<?php echo esc_attr( genesis_get_custom_field( '_entry_itemtype' ) ); ?>" /></p>
 
-	<p><label for="entry_itemprop"><b><?php _e( 'Entry - itemprop', 'microdata' ); ?></b></label><label><?php _e( ' (Used on post only)', 'microdata_manager' ); ?></label></p>
+	<p><label for="entry_itemprop"><b><?php _e( 'Entry - itemprop', 'microdata-manager' ); ?></b></label><label><?php _e( ' (Used on post only)', 'microdata-manager' ); ?></label></p>
 	<p><input class="large-text" type="text" name="microdata_manager[_entry_itemprop]" id="entry_itemprop" placeholder="blogPost" value="<?php echo esc_attr( genesis_get_custom_field( '_entry_itemprop' ) ); ?>" /></p>
 
-	<p><label for="entry_title_itemprop"><b><?php _e( 'Entry Title - itemprop', 'microdata' ); ?></b></label><label><?php _e( ' (Used on page and post)', 'microdata_manager' ); ?></label></p>
+	<p><label for="entry_title_itemprop"><b><?php _e( 'Entry Title - itemprop', 'microdata-manager' ); ?></b></label><label><?php _e( ' (Used on page and post)', 'microdata-manager' ); ?></label></p>
 	<p><input class="large-text" type="text" name="microdata_manager[_entry_title_itemprop]" id="entry_title_itemprop" placeholder="headline" value="<?php echo esc_attr( genesis_get_custom_field( '_entry_title_itemprop' ) ); ?>" /></p>
 
-	<p><label for="entry_content_itemprop"><b><?php _e( 'Entry Content - itemprop', 'microdata' ); ?></b></label><label><?php _e( ' (Used on page and post)', 'microdata_manager' ); ?></label></p>
+	<p><label for="entry_content_itemprop"><b><?php _e( 'Entry Content - itemprop', 'microdata-manager' ); ?></b></label><label><?php _e( ' (Used on page and post)', 'microdata-manager' ); ?></label></p>
 	<p><input class="large-text" type="text" name="microdata_manager[_entry_content_itemprop]" id="entry_content_itemprop" placeholder="text" value="<?php echo esc_attr( genesis_get_custom_field( '_entry_content_itemprop' ) ); ?>" /></p>
 
-	<label><?php _e( 'Enter something to override the default settings displayed within the fields. Visit <a href="http://www.schema.org/" target="_blank">schema.org</a> for details.', 'microdata_manager' ); ?></label>
+	<label><?php _e( 'Enter something to override the default settings displayed within the fields. Visit <a href="http://www.schema.org/" target="_blank">schema.org</a> for details.', 'microdata-manager' ); ?></label>
 
 	<?php
 }
