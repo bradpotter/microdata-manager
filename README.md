@@ -23,7 +23,7 @@ The Genesis Framework uses Schema "types" that are broad and suitable for the ma
 
 To better understand why you may want to change the Schema, read the following article by one of the leading WordPress SEO experts, Joost de Valk. <strong>Schema.org & Genesis 2.0 - http://yoast.com/schema-org-genesis-2-0/</strong>
 
-See the Schema Type Hierarchy here: http://schema.org/docs/full.html
+Also see the Schema Type Hierarchy here: http://schema.org/docs/full.html
 
 #Genesis Default Microdata Settings#
 Main Content - itemtype (Used on post only)<br />
