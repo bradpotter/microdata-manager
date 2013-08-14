@@ -2,7 +2,7 @@ Microdata Manager
 =================
 
 <strong>DESCRIPTION</strong><br />
-Microdata Manager is a plugin created for the Genesis Framework. The plugin allows a user to override the default Microdata settings in a Page, Post or Custom Post Type via a convenient Microdata Settings panel. Genesis uses the 
+Microdata Manager is a plugin created for the Genesis Framework. The plugin allows a user to override the default Microdata settings in a Page, Post or Custom Post Type via a convenient Microdata Settings panel.
 
 <strong>INTRODUCTION</strong><br />
 Microdata is a feature of HTML5 that provides a simple way to embed semantic markup into HTML documents. “Search engines, web crawlers, and browsers can extract and process Microdata from a web page and use it to provide a richer browsing experience for users”. Microdata uses a supporting vocabulary. Genesis 2.0 uses the vocabulary from Schema.org. Schema.org provides a collection of schemas, i.e., html tags, that webmasters can use to markup their pages in ways recognized by major search providers. Search engines including Bing, Google, Yahoo! and Yandex rely on this markup to improve the display of search results, making it easier for people to find the right web pages.
