@@ -24,6 +24,7 @@ http://schema.org/Blog<br />
 
 Entry - itemtype (Used on page and post)<br />
 http://schema.org/CreativeWork<br />
+`<article class="entry" itemscope="itemscope" itemtype="http://schema.org/newCreativeWork">`
 
 Entry - itemprop (Used on post only)<br />
 blogPost<br />
