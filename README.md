@@ -26,7 +26,7 @@ Schema.org & Genesis 2.0 - http://yoast.com/schema-org-genesis-2-0/
 
 See the Schema Type Hierarchy here: http://schema.org/docs/full.html
 
-#Default Microdata Settings - Genesis Framework#
+#Default Microdata Settings in Genesis#
 Main Content - itemtype (Used on post only)<br />
 http://schema.org/Blog<br />
 `<main class="content" role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">`<br />
