@@ -10,7 +10,7 @@ Future Development: Introduce a settings page in the Genesis admin menu with the
 Downloading: If you download the plugin zip file and expand. Rename the expanded folder of "microdata-manager-master" to "microdata-manager" and upload to your WordPress plugins folder.
 
 
-INSTALL<br />
+<strong>INSTALL</strong><br />
 
 1. Upload the microdata-manager folder via FTP to your wp-content/plugins/ directory.<br />
 2. Go to your WordPress menu under Plugins and select Installed Plugins.<br />
