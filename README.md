@@ -2,7 +2,7 @@ Microdata Manager
 =================
 
 <strong>DESCRIPTION</strong><br />
-Microdata Manager is a plugin created for the Genesis Framework. The plugin allows a user to override the default Microdata settings in a Page, Post or Custom Post Type.
+Microdata Manager is a plugin created for the Genesis Framework. The plugin allows a user to override the default Microdata settings in a Page, Post or Custom Post Type via a convenient Microdata Settings panel.
 
 <strong>REQUIREMENTS</strong><br />
 WordPress 3.6<br />
