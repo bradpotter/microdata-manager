@@ -9,6 +9,9 @@
  * @link       http://bradpotter.com/plugins/microdata-manager
  */
 
+/**
+ * @todo Move these into a function so that they can potentially be unhooked.
+ */
 add_post_type_support( 'post', array( 'microdata-manager' ) );
 add_post_type_support( 'page', array( 'microdata-manager' ) );
 
@@ -28,7 +31,7 @@ function microdata_manager_add_inpost_microdata_box() {
 
 	foreach ( (array) get_post_types( array( 'public' => true ) ) as $type ) {
 		if ( post_type_supports( $type, 'microdata-manager' ) )
-			add_meta_box( 'microdata_manager_inpost_microdata_box', __( 'Microdata Settings', 'microdata_manager' ), 'microdata_manager_inpost_microdata_box', $type, 'normal', 'high' );
+			add_meta_box( 'microdata_manager_inpost_microdata_box', __( 'Microdata Settings', 'microdata-manager' ), 'microdata_manager_inpost_microdata_box', $type, 'normal', 'high' );
 	}
 
 }
@@ -46,22 +49,22 @@ function microdata_manager_inpost_microdata_box() {
 
 	?>
 
-	<p><label for="content_itemtype"><b><?php _e( 'Main Content - itemtype', 'microdata-manager' ); ?></b></label><label><?php _e( ' (Used on post only)', 'microdata-manager' ); ?></label></p>
+	<p><label for="content_itemtype"><b><?php _e( 'Main Content - itemtype', 'microdata-manager' ); ?></b> <?php _e( '(Used on post only)', 'microdata-manager' ); ?></label></p>
 	<p><input class="large-text" type="text" name="microdata_manager[_content_itemtype]" id="content_itemtype" placeholder="http://schema.org/Blog" value="<?php echo esc_attr( genesis_get_custom_field( '_content_itemtype' ) ); ?>" /></p>
 
-	<p><label for="entry_itemtype"><b><?php _e( 'Entry - itemtype', 'microdata-manager' ); ?></b></label><label><?php _e( ' (Used on page and post)', 'microdata-manager' ); ?></label></p>
+	<p><label for="entry_itemtype"><b><?php _e( 'Entry - itemtype', 'microdata-manager' ); ?></b> <?php _e( '(Used on page and post)', 'microdata-manager' ); ?></label></p>
 	<p><input class="large-text" type="text" name="microdata_manager[_entry_itemtype]" id="entry_itemtype" placeholder="<?php echo $placeholder; ?>" value="<?php echo esc_attr( genesis_get_custom_field( '_entry_itemtype' ) ); ?>" /></p>
 
-	<p><label for="entry_itemprop"><b><?php _e( 'Entry - itemprop', 'microdata-manager' ); ?></b></label><label><?php _e( ' (Used on post only)', 'microdata-manager' ); ?></label></p>
+	<p><label for="entry_itemprop"><b><?php _e( 'Entry - itemprop', 'microdata-manager' ); ?></b> <?php _e( '(Used on post only)', 'microdata-manager' ); ?></label></p>
 	<p><input class="large-text" type="text" name="microdata_manager[_entry_itemprop]" id="entry_itemprop" placeholder="blogPost" value="<?php echo esc_attr( genesis_get_custom_field( '_entry_itemprop' ) ); ?>" /></p>
 
-	<p><label for="entry_title_itemprop"><b><?php _e( 'Entry Title - itemprop', 'microdata-manager' ); ?></b></label><label><?php _e( ' (Used on page and post)', 'microdata-manager' ); ?></label></p>
+	<p><label for="entry_title_itemprop"><b><?php _e( 'Entry Title - itemprop', 'microdata-manager' ); ?></b> <?php _e( '(Used on page and post)', 'microdata-manager' ); ?></label></p>
 	<p><input class="large-text" type="text" name="microdata_manager[_entry_title_itemprop]" id="entry_title_itemprop" placeholder="headline" value="<?php echo esc_attr( genesis_get_custom_field( '_entry_title_itemprop' ) ); ?>" /></p>
 
-	<p><label for="entry_content_itemprop"><b><?php _e( 'Entry Content - itemprop', 'microdata-manager' ); ?></b></label><label><?php _e( ' (Used on page and post)', 'microdata-manager' ); ?></label></p>
+	<p><label for="entry_content_itemprop"><b><?php _e( 'Entry Content - itemprop', 'microdata-manager' ); ?></b> <?php _e( '(Used on page and post)', 'microdata-manager' ); ?></label></p>
 	<p><input class="large-text" type="text" name="microdata_manager[_entry_content_itemprop]" id="entry_content_itemprop" placeholder="text" value="<?php echo esc_attr( genesis_get_custom_field( '_entry_content_itemprop' ) ); ?>" /></p>
 
-	<label><?php _e( 'Enter something to override the default settings displayed within the fields. Visit <a href="http://www.schema.org/" target="_blank">schema.org</a> for details.', 'microdata-manager' ); ?></label>
+	<span class="description"><?php _e( 'Enter something to override the default settings displayed within the fields. Visit <a href="http://www.schema.org/" target="_blank">schema.org</a> for details.', 'microdata-manager' ); ?>
 
 	<?php
 }
@@ -70,14 +73,12 @@ add_action( 'save_post', 'microdata_manager_inpost_microdata_save', 1, 2 );
 /**
  * Save the Schema settings when we save a post or page.
  *
- * Some values get sanitized, the rest are pulled from identically named subkeys in the $_POST['microdata_manager'] array.
- *
  * @since 1.0.0
  *
  * @param integer  $post_id Post ID.
  * @param stdClass $post    Post object.
  *
- * @return mixed Returns post id if permissions incorrect, null if doing autosave, ajax or future post, false if update or delete failed, and true on success.
+ * @return null
  */
 function microdata_manager_inpost_microdata_save( $post_id, $post ) {
 
@@ -85,21 +86,23 @@ function microdata_manager_inpost_microdata_save( $post_id, $post ) {
 		return;
 
 	// Merge user submitted options with fallback defaults
-	$data = wp_parse_args( $_POST['microdata_manager'], array(
-		'_content_itemtype' => '',
-		'_entry_itemtype' => '',
-		'_entry_itemprop' => '',
-		'_entry_title_itemprop' => '',
+	$defaults = array(
+		'_content_itemtype'       => '',
+		'_entry_itemtype'         => '',
+		'_entry_itemprop'         => '',
+		'_entry_title_itemprop'   => '',
 		'_entry_content_itemprop' => '',
-	) );
+	);
 
-	// Sanitize the title, description, and tags
+	$data = wp_parse_args( $_POST['microdata_manager'], $defaults );
+	$clean_data = array();
+
 	foreach ( (array) $data as $key => $value ) {
-		if ( in_array( $key, array( '_content_itemtype', '_entry_itemtype', '_entry_itemprop', '_entry_title_itemprop', '_entry_content_itemprop' ) ) )
-			$data[ $key ] = strip_tags( $value );
+		if ( in_array( $key, array_keys( $defaults ) ) )
+			$clean_data[ $key ] = sanitize_text_field( $value );
 	}
 
-	genesis_save_custom_fields( $data, 'microdata_manager_inpost_microdata_save', 'microdata_manager_inpost_microdata_nonce', $post, $post_id );
+	genesis_save_custom_fields( $clean_data, 'microdata_manager_inpost_microdata_save', 'microdata_manager_inpost_microdata_nonce', $post );
 
 }
 
