@@ -2,16 +2,16 @@ Microdata Manager
 =================
 
 Copyright © 2013 Brad Potter. All rights reserved.<br />
-http://bradpotter.com<br /><br />
+http://bradpotter.com
 
 #Description#
 Microdata Manager is a plugin created for the Genesis Framework. The plugin allows a user to override the default Microdata settings in a Page, Post or Custom Post Type via a convenient Microdata Settings panel. Non-coders rejoice!<br /><br />
 
 #Requirements#
 WordPress 3.6<br />
-Genesis Framework 2.0<br /><br />
+Genesis Framework 2.0
 
-#INTRODUCTION#
+#Introduction#
 Microdata is a feature of HTML5 that provides a simple way to embed semantic markup into HTML documents. “Search engines, web crawlers, and browsers can extract and process Microdata from a web page and use it <strong>to provide a richer browsing experience</strong> for users” - Wikipedia.<br />
 
 Microdata uses a supporting vocabulary. The Genesis Framework 2.0 uses the vocabulary posted at Schema.org.<br />
