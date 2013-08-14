@@ -16,9 +16,10 @@ Microdata uses a supporting vocabulary. Genesis 2.0 uses the vocabulary posted a
 Schema.org provides a collection of schemas, i.e., html tags, that webmasters can use to markup their pages in ways recognized by major search providers. Search engines including Bing, Google, Yahoo! and Yandex rely on this markup to improve the display of search results, making it easier for people to find the right web pages.
 Please visit http://schema.org/docs/full.html to learn more about Schema.<br />
 
-<strong>DEFAULT GENESIS MICRODATA SETTINGS</strong><br />
-While the Genesis Framework uses a Schema "type" that is broad and suitable for the majority of websites, a person may decide to use a type that is more targeted or narrow in focus.
+The Genesis Framework uses a Schema "type" that is broad and suitable for the majority of websites however a person may decide to use a type that is more targeted or narrow in focus.
+See the Schema Type Hierarchy here: http://schema.org/docs/full.html<br />
 
+<strong>DEFAULT GENESIS MICRODATA SETTINGS</strong><br />
 Main Content - itemtype (Used on post only)<br />
 http://schema.org/Blog<br />
 `<main class="content" role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">`<br />
