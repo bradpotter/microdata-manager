@@ -1,7 +1,7 @@
 Microdata Manager
 =================
 
-Copyright © 2013 Brad Potter<br />
+Copyright © 2013 Brad Potter. All rights reserved.<br />
 http://bradpotter.com
 
 <strong>DESCRIPTION</strong><br />
