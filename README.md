@@ -62,6 +62,6 @@ Introduce a settings page in the Genesis admin menu with the capability of overr
 #Credits#
 Many of the plugin's functions are based on code within the Genesis Framework itself. The core developers and contributors to Genesis have spent countless hours creating and perfecting a theme framework that is second to none. I am grateful for their hard work and dedication. http://www.studiopress.com/features
 
-This plugin started as a wishful thought on my part and a challenge from Gary Jones to go and create it "Don't hope - go build!". http://gamajo.com<br/>
+This plugin started as a wishful thought on my part and a challenge from Gary Jones "Don't hope - go build!". http://gamajo.com<br/>
 
 This is my first plugin and perhaps the beginning of many more to come.
