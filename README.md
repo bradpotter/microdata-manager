@@ -23,7 +23,7 @@ The Genesis Framework uses a Schema "type" that is broad and suitable for the ma
 
 See the Schema Type Hierarchy here: http://schema.org/docs/full.html<br />
 
-<strong>DEFAULT GENESIS MICRODATA SETTINGS</strong><br />
+<strong>DEFAULT GENESIS FRAMEWORK MICRODATA SETTINGS</strong><br />
 Main Content - itemtype (Used on post only)<br />
 http://schema.org/Blog<br />
 `<main class="content" role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">`<br />
