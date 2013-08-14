@@ -12,13 +12,15 @@
  * @since      0.9.0
  */
 
+ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+
 add_post_type_support( 'post', array( 'microdata-manager' ) );
 add_post_type_support( 'page', array( 'microdata-manager' ) );
 
 add_action( 'admin_menu', 'microdata_manager_add_inpost_microdata_box' );
 /**
  * Register a new meta box to the post or page edit screen, so that the user can set Microdata options on a per-post or per-page basis.
- * 
+ *
  * If the post type does not support microdata-manager, then the Microdata Settings meta box will not be added.
  *
  * @since 0.9.0
@@ -176,7 +178,7 @@ function microdata_manager_attributes_entry( $attributes ) {
 
 	} if ( is_page() && $e_it_microdata ) {
 		$attributes['itemtype']  = $e_it_microdata;
-	
+
 	} if ( $mytypes == $post->post_type && $e_it_microdata ) {
 		$attributes['itemtype']  = $e_it_microdata;
 
@@ -197,7 +199,7 @@ add_filter( 'genesis_attr_entry-title', 'microdata_manager_attributes_entry_titl
 function microdata_manager_attributes_entry_title( $attributes ) {
 
 	$et_ip_microdata = esc_attr( genesis_get_custom_field( '_entry_title_itemprop' ) );
-	
+
 	if ( $et_ip_microdata ) {
 		$attributes['itemprop'] = $et_ip_microdata;
 
@@ -223,8 +225,8 @@ function microdata_manager_attributes_entry_content( $attributes ) {
 	global $post;
 
 	$ec_ip_microdata = esc_attr( genesis_get_custom_field( '_entry_content_itemprop' ) );
-	
-	
+
+
 	if ( $ec_ip_microdata ) {
 		$attributes['itemprop'] = $ec_ip_microdata;
 
