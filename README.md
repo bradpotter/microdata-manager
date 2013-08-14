@@ -88,4 +88,6 @@ This plugin started as a wishful thought on my part and a friendly challenge fro
 
 > "Don't hope - go build!"
 
+Thanks to Gary for his contributions to Microdata Manager.
+
 Copyright © 2013 [Brad Potter](http://bradpotter.com). All rights reserved.
