@@ -20,6 +20,9 @@ Schema.org provides a collection of schemas, i.e., html tags, that webmasters ca
 Please visit http://schema.org to learn more about Schema.<br />
 
 The Genesis Framework uses a Schema "type" that is broad and suitable for the majority of websites however a person may want to use a type that is more specific or narrow in focus. This plugin is for you.<br />
+To better understand, read the following article by one of the leading WordPress SEO experts, Joost de Valk.
+
+Schema.org & Genesis 2.0 - http://yoast.com/schema-org-genesis-2-0/
 
 See the Schema Type Hierarchy here: http://schema.org/docs/full.html<br /><br />
 
