@@ -21,7 +21,7 @@ Please visit http://schema.org to learn more about Schema.<br />
 
 The Genesis Framework uses a Schema "type" that is broad and suitable for the majority of websites however a person may want to use a type that is more targeted or narrow in focus. This plugin is for you.<br />
 
-See the Schema Type Hierarchy here: http://schema.org/docs/full.html<br />
+See the Schema Type Hierarchy here: http://schema.org/docs/full.html<br /><br />
 
 <strong>DEFAULT GENESIS FRAMEWORK MICRODATA SETTINGS</strong><br />
 Main Content - itemtype (Used on post only)<br />
@@ -42,7 +42,7 @@ headline<br />
 
 Entry Content - itemprop (Used on page and post)<br />
 text<br />
-`<div class="entry-content" itemprop="text">`
+`<div class="entry-content" itemprop="text">`<br /><br />
 
 
 <strong>INSTALLATION</strong><br />
@@ -52,7 +52,7 @@ Important: If you download the plugin zip file from GitHub and expand, rename th
 2. Go to your WordPress menu under Plugins and select Installed Plugins.<br />
 3. Activate the Microdata Manager plugin.<br />
 4. A new meta box titled "Microdata Settings" will be added to the Edit Page or Edit Post screen.<br />
-5. Enter something to override the default settings displayed within the fields.<br />
+5. Enter something to override the default settings displayed within the fields.<br /><br />
 
 <strong>FUTURE DEVELOPMENT</strong><br />
 Introduce a settings page in the Genesis admin menu with the capability of overriding global Microdata settings.
