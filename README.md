@@ -27,6 +27,7 @@ http://schema.org/CreativeWork<br />
 
 Entry - itemprop (Used on post only)<br />
 blogPost<br />
+`<article class="entry" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">`
 
 Entry Title - itemprop (Used on page and post)<br />
 headline<br />
