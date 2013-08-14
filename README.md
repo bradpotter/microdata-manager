@@ -19,7 +19,7 @@ Downloading: If you download the plugin zip file and expand. Rename the expanded
 5. Enter something to override the default settings displayed within the fields.<br />
 
 
-DEFAULT GENESIS MICRODATA SETTINGS<br />
+<strong>DEFAULT GENESIS MICRODATA SETTINGS</strong><br />
 
 Main Content - itemtype (Used on post only)<br />
 http://schema.org/Blog<br />
