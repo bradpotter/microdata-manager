@@ -20,6 +20,7 @@ Please visit http://schema.org/docs/full.html to learn more about Schema.<br />
 
 Main Content - itemtype (Used on post only)<br />
 http://schema.org/Blog<br />
+<main class="content" role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog"><br />
 
 Entry - itemtype (Used on page and post)<br />
 http://schema.org/CreativeWork<br />
