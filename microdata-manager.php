@@ -11,14 +11,7 @@ License URI: http://www.opensource.org/licenses/gpl-license.php
 Copyright (c) 2013 Brad Potter
  */
 
-/**
- * Prevent direct access to this file.
- *
- * @since 0.9.0
- */
-if ( ! defined( 'ABSPATH' ) ) {
-	exit( 'Sorry, you are not allowed to access this file directly.' );
-}
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 /**
  * Setting constants
@@ -50,7 +43,7 @@ function microdata_manager_activation() {
  * @since 0.9.0
  */
 function microdata_manager_deactivate( $genesis_version = '2.0.0', $wp_version = '3.6' ) {
-	
+
 	deactivate_plugins( plugin_basename( __FILE__ ) );
 	wp_die( sprintf( __( 'Sorry, you cannot run Microdata Manager without WordPress %s and <a href="%s">Genesis %s</a>, or greater.', 'microdata_manager' ), $wp_version, 'http://bradpotter.com/go/genesis', $genesis_version ) );
 
