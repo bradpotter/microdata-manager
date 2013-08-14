@@ -51,5 +51,5 @@ add_action( 'genesis_init', 'microdata_manager_functions_init', 15 );
  */
 function microdata_manager_functions_init() {
 
-		require_once plugin_dir_path( __FILE__ ) . '/lib/microdata-manager-functions.php';
+		require_once plugin_dir_path( __FILE__ ) . '/microdata-manager-functions.php';
 }
