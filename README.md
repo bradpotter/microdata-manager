@@ -21,8 +21,7 @@ Please visit http://schema.org to learn more about Schema.
 
 The Genesis Framework uses Schema "types" that are broad and suitable for the majority of websites however a person may want to use a type that is more specific or narrow in focus. This plugin is for you.
 
-To better understand why you may want to change the Schema, read the following article by one of the leading WordPress SEO experts, Joost de Valk.<br />
-Schema.org & Genesis 2.0 - http://yoast.com/schema-org-genesis-2-0/
+To better understand why you may want to change the Schema, read the following article by one of the leading WordPress SEO experts, Joost de Valk. <strong>Schema.org & Genesis 2.0 - http://yoast.com/schema-org-genesis-2-0/</strong>
 
 See the Schema Type Hierarchy here: http://schema.org/docs/full.html
 
