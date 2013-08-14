@@ -35,6 +35,7 @@ headline<br />
 
 Entry Content - itemprop (Used on page and post)<br />
 text<br />
+`<div class="entry-content" itemprop="text">`
 
 
 <strong>INSTALLATION</strong><br />
