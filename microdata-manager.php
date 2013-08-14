@@ -8,7 +8,7 @@ Author: Brad Potter
 Author URI: http://www.bradpotter.com/
 License: GPL-2.0+
 License URI: http://www.opensource.org/licenses/gpl-license.php
-Copyright (c) Brad Potter
+Copyright (c) 2013 Brad Potter
  */
 
 /**
