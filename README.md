@@ -15,3 +15,20 @@ INSTALL<br />
 3. Activate the Microdata Manager Plugin.<br />
 4. A new meta box titled "Microdata Settings" will be added to the Edit Page or Edit Post screen.<br />
 5. Enter something to override the default settings displayed within the fields.<br />
+
+DEFAULT GENESIS MICRODATA SETTINGS<br />
+
+Main Content - itemtype (Used on post only)<br />
+http://schema.org/Blog<br />
+
+Entry - itemtype (Used on page and post)<br />
+http://schema.org/CreativeWork<br />
+
+Entry - itemprop (Used on post only)<br />
+blogPost<br />
+
+Entry Title - itemprop (Used on page and post)<br />
+headline<br />
+
+Entry Content - itemprop (Used on page and post)<br />
+text<br />
