@@ -60,7 +60,7 @@ Important: If you download the plugin zip file from GitHub and expand, rename th
 Introduce a settings page in the Genesis admin menu with the capability of overriding global Microdata settings.
 
 #Credits#
-Many of the plugin's functions are based on code within the Genesis Framework itself. The core developers and contributors to Genesis have spent countless hours creating and perfecting a theme framework that is second to none. I am grateful for their hard work and dedication. http://www.studiopress.com/features
+Many of the plugin's functions are based on code from within the Genesis Framework itself. The core developers and contributors to Genesis have spent countless hours creating and perfecting a theme framework that is second to none. I am grateful for their hard work and dedication. http://www.studiopress.com/features
 
 This plugin started as a wishful thought on my part and a challenge from Gary Jones "Don't hope - go build!". http://gamajo.com<br/>
 
