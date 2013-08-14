@@ -1,15 +1,12 @@
 <?php
 /**
- * Functions for Microdata Manager
+ * Microdata Manager plugin for Genesis 2.0.0+.
  *
- * @package    Microdata Manager
+ * @package    MicrodataManager
  * @author     Brad Potter
  * @copyright  Copyright (c) 2013, Brad Potter
- * @license    http://www.opensource.org/licenses/gpl-license.php GPL-2.0+
+ * @license    GPL-2.0+
  * @link       http://bradpotter.com/plugins/microdata-manager
- * @credit     Based in part on code from the Genesis Framework by StudioPress
- *
- * @since      0.9.0
  */
 
 add_post_type_support( 'post', array( 'microdata-manager' ) );
@@ -17,11 +14,13 @@ add_post_type_support( 'page', array( 'microdata-manager' ) );
 
 add_action( 'admin_menu', 'microdata_manager_add_inpost_microdata_box' );
 /**
- * Register a new meta box to the post or page edit screen, so that the user can set Microdata options on a per-post or per-page basis.
- * 
+ * Register a new meta box to the post or page edit screen.
+ *
+ * Allow the user to set Microdata options on a per-post or per-page basis.
+ *
  * If the post type does not support microdata-manager, then the Microdata Settings meta box will not be added.
  *
- * @since 0.9.0
+ * @since 1.0.0
  *
  * @see microdata_manager_inpost_microdata_box() Generates the content in the meta box.
  */
@@ -37,9 +36,7 @@ function microdata_manager_add_inpost_microdata_box() {
 /**
  * Callback for in-post Microdata Settings meta box.
  *
- * @since 0.9.0
- *
- * @uses genesis_get_custom_field() Get custom field value.
+ * @since 1.0.0
  */
 function microdata_manager_inpost_microdata_box() {
 
@@ -75,9 +72,7 @@ add_action( 'save_post', 'microdata_manager_inpost_microdata_save', 1, 2 );
  *
  * Some values get sanitized, the rest are pulled from identically named subkeys in the $_POST['microdata_manager'] array.
  *
- * @since 0.9.0
- *
- * @uses genesis_save_custom_fields() Perform checks and saves post meta / custom field data to a post or page.
+ * @since 1.0.0
  *
  * @param integer  $post_id Post ID.
  * @param stdClass $post    Post object.
@@ -89,7 +84,7 @@ function microdata_manager_inpost_microdata_save( $post_id, $post ) {
 	if ( ! isset( $_POST['microdata_manager'] ) )
 		return;
 
-	//* Merge user submitted options with fallback defaults
+	// Merge user submitted options with fallback defaults
 	$data = wp_parse_args( $_POST['microdata_manager'], array(
 		'_content_itemtype' => '',
 		'_entry_itemtype' => '',
@@ -98,7 +93,7 @@ function microdata_manager_inpost_microdata_save( $post_id, $post ) {
 		'_entry_content_itemprop' => '',
 	) );
 
-	//* Sanitize the title, description, and tags
+	// Sanitize the title, description, and tags
 	foreach ( (array) $data as $key => $value ) {
 		if ( in_array( $key, array( '_content_itemtype', '_entry_itemtype', '_entry_itemprop', '_entry_title_itemprop', '_entry_content_itemprop' ) ) )
 			$data[ $key ] = strip_tags( $value );
@@ -112,7 +107,7 @@ add_filter( 'genesis_attr_content', 'microdata_manager_attributes_content' );
 /**
  * Add attributes for main content element.
  *
- * @since 0.9.0
+ * @since 1.0.0
  *
  * @return array Amended attributes.
  */
@@ -122,7 +117,7 @@ function microdata_manager_attributes_content( $attributes ) {
 	$attributes['itemprop'] = 'mainContentOfPage';
 	$c_it_microdata = esc_attr( genesis_get_custom_field( '_content_itemtype' ) );
 
-	//* Blog microdata
+	// Blog microdata
 	if ( is_singular( 'post' ) || is_archive() || is_home() || is_page_template( 'page_blog.php' ) ) {
 		$attributes['itemscope'] = 'itemscope';
 		$attributes['itemtype']  = 'http://schema.org/Blog';
@@ -133,7 +128,7 @@ function microdata_manager_attributes_content( $attributes ) {
 		$attributes['itemtype']  = $c_it_microdata;
 	}
 
-	//* Search results pages
+	// Search results pages
 	if ( is_search() ) {
 		$attributes['itemscope'] = 'itemscope';
 		$attributes['itemtype'] = 'http://schema.org/SearchResultsPage';
@@ -147,7 +142,7 @@ add_filter( 'genesis_attr_entry', 'microdata_manager_attributes_entry' );
 /**
  * Add attributes for entry element.
  *
- * @since 0.9.0
+ * @since 1.0.0
  *
  * @return array Amended attributes.
  */
@@ -176,7 +171,7 @@ function microdata_manager_attributes_entry( $attributes ) {
 
 	} if ( is_page() && $e_it_microdata ) {
 		$attributes['itemtype']  = $e_it_microdata;
-	
+
 	} if ( $mytypes == $post->post_type && $e_it_microdata ) {
 		$attributes['itemtype']  = $e_it_microdata;
 
@@ -190,14 +185,14 @@ add_filter( 'genesis_attr_entry-title', 'microdata_manager_attributes_entry_titl
 /**
  * Add attributes for entry title element.
  *
- * @since 0.9.0
+ * @since 1.0.0
  *
  * @return array Amended attributes.
  */
 function microdata_manager_attributes_entry_title( $attributes ) {
 
 	$et_ip_microdata = esc_attr( genesis_get_custom_field( '_entry_title_itemprop' ) );
-	
+
 	if ( $et_ip_microdata ) {
 		$attributes['itemprop'] = $et_ip_microdata;
 
@@ -214,7 +209,7 @@ add_filter( 'genesis_attr_entry-content', 'microdata_manager_attributes_entry_co
 /**
  * Add attributes for entry content element.
  *
- * @since 0.9.0
+ * @since 1.0.0
  *
  * @return array Amended attributes.
  */
@@ -223,7 +218,7 @@ function microdata_manager_attributes_entry_content( $attributes ) {
 	global $post;
 
 	$ec_ip_microdata = esc_attr( genesis_get_custom_field( '_entry_content_itemprop' ) );
-	
+
 	if ( $ec_ip_microdata ) {
 		$attributes['itemprop'] = $ec_ip_microdata;
 
