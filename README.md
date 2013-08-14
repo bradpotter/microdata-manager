@@ -19,11 +19,11 @@ Please visit http://schema.org/docs/full.html to learn more about Schema.<br />
 <strong>DEFAULT GENESIS MICRODATA SETTINGS</strong><br />
 
 Main Content - itemtype (Used on post only)<br />
-`http://schema.org/Blog`<br />
+http://schema.org/Blog<br />
 `<main class="content" role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">`<br />
 
 Entry - itemtype (Used on page and post)<br />
-`http://schema.org/CreativeWork`<br />
+http://schema.org/CreativeWork<br />
 `<article class="entry" itemscope="itemscope" itemtype="http://schema.org/newCreativeWork">`
 
 Entry - itemprop (Used on post only)<br />
