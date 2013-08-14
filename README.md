@@ -45,7 +45,7 @@ headline<br />
 
 Entry Content - itemprop (Used on page and post)<br />
 text<br />
-`<div class="entry-content" itemprop="text">`<br /><br />
+`<div class="entry-content" itemprop="text">`
 
 
 #Installation#
@@ -55,7 +55,7 @@ Important: If you download the plugin zip file from GitHub and expand, rename th
 2. Go to your WordPress menu under Plugins and select Installed Plugins.<br />
 3. Activate the Microdata Manager plugin.<br />
 4. A new meta box titled "Microdata Settings" will be added to the Edit Page or Edit Post screen.<br />
-5. Enter something to override the default settings displayed within the fields.<br /><br />
+5. Enter something to override the default settings displayed within the fields.
 
 #Future Development#
 Introduce a settings page in the Genesis admin menu with the capability of overriding global Microdata settings.
