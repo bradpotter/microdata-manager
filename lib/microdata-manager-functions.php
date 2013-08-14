@@ -224,7 +224,6 @@ function microdata_manager_attributes_entry_content( $attributes ) {
 
 	$ec_ip_microdata = esc_attr( genesis_get_custom_field( '_entry_content_itemprop' ) );
 	
-	
 	if ( $ec_ip_microdata ) {
 		$attributes['itemprop'] = $ec_ip_microdata;
 
