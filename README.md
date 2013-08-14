@@ -31,6 +31,7 @@ blogPost<br />
 
 Entry Title - itemprop (Used on page and post)<br />
 headline<br />
+`<h1 class="entry-title" itemprop="headline">`
 
 Entry Content - itemprop (Used on page and post)<br />
 text<br />
