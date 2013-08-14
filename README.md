@@ -48,7 +48,7 @@ text<br />
 `<div class="entry-content" itemprop="text">`<br /><br />
 
 
-<strong>INSTALLATION</strong><br />
+#Installation#
 Important: If you download the plugin zip file from GitHub and expand, rename the expanded folder of "microdata-manager-master" to "microdata-manager" and upload to your WordPress plugins folder.
 
 1. Upload the microdata-manager folder via FTP to your wp-content/plugins/ directory.<br />
@@ -57,5 +57,5 @@ Important: If you download the plugin zip file from GitHub and expand, rename th
 4. A new meta box titled "Microdata Settings" will be added to the Edit Page or Edit Post screen.<br />
 5. Enter something to override the default settings displayed within the fields.<br /><br />
 
-<strong>FUTURE DEVELOPMENT</strong><br />
+#Future Development#
 Introduce a settings page in the Genesis admin menu with the capability of overriding global Microdata settings.
