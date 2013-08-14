@@ -13,5 +13,5 @@ INSTALL<br />
 1. Upload the microdata-manager folder via FTP to your wp-content/plugins/ directory.<br />
 2. Go to your WordPress menu under Plugins and select Installed Plugins.<br />
 3. Activate the Microdata Manager Plugin.<br />
-4. A new meta box titled "Microdata Settings" will be added to the Edit Page/Post screen.<br />
+4. A new meta box titled "Microdata Settings" will be added to the Edit Page or Edit Post screen.<br />
 5. Enter something to override the default settings displayed within the fields.<br />
