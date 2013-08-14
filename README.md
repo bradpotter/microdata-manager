@@ -17,6 +17,7 @@ Schema.org provides a collection of schemas, i.e., html tags, that webmasters ca
 Please visit http://schema.org/docs/full.html to learn more about Schema.<br />
 
 <strong>DEFAULT GENESIS MICRODATA SETTINGS</strong><br />
+While the Genesis Framework uses a Schema "type" that is broad and suitable for the majority of websites, a person may decide to use a type that is more targeted or narrow in focus.
 
 Main Content - itemtype (Used on post only)<br />
 http://schema.org/Blog<br />
@@ -24,7 +25,7 @@ http://schema.org/Blog<br />
 
 Entry - itemtype (Used on page and post)<br />
 http://schema.org/CreativeWork<br />
-`<article class="entry" itemscope="itemscope" itemtype="http://schema.org/newCreativeWork">`
+`<article class="entry" itemscope="itemscope" itemtype="http://schema.org/CreativeWork">`
 
 Entry - itemprop (Used on post only)<br />
 blogPost<br />
