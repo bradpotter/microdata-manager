@@ -9,11 +9,18 @@
  * @link       http://bradpotter.com/plugins/microdata-manager
  */
 
+add_action( 'genesis_init', 'microdata_manager_post_type_support', 5 );
 /**
- * @todo Move these into a function so that they can potentially be unhooked.
+ * Initialize post type support.
+ * 
+ * @since 1.0.0
  */
-add_post_type_support( 'post', array( 'microdata-manager' ) );
-add_post_type_support( 'page', array( 'microdata-manager' ) );
+function microdata_manager_post_type_support() {
+	
+	add_post_type_support( 'post', array( 'microdata-manager' ) );
+	add_post_type_support( 'page', array( 'microdata-manager' ) );
+	
+}
 
 add_action( 'admin_menu', 'microdata_manager_add_inpost_microdata_box' );
 /**
