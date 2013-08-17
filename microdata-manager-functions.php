@@ -2,7 +2,7 @@
 /**
  * Microdata Manager plugin for Genesis 2.0.0+.
  *
- * @package    MicrodataManager
+ * @package    Microdata Manager
  * @author     Brad Potter
  * @copyright  Copyright (c) 2013, Brad Potter
  * @license    GPL-2.0+
