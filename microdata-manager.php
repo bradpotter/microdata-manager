@@ -12,7 +12,7 @@
  * Plugin Name: Microdata Manager
  * Plugin URI:  http://www.bradpotter.com/plugins/microdata-manager
  * Description: Allows the end user to change Genesis Microdata settings.
- * Version:     0.9.0
+ * Version:     1.0.0
  * Author:      Brad Potter
  * Author URI:  http://www.bradpotter.com/
  * License:     GPL-2.0+
